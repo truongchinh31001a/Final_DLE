@@ -1,0 +1,22 @@
+standard_labels:
+  acute_otitis_media:
+    - acute_otitis_media
+    - acute otitis media
+    - aom
+  cerumen_impaction:
+    - cerumen_impaction
+    - cerumen impaction
+    - earwax
+    - wax
+  chronic_otitis_media:
+    - chronic_otitis_media
+    - chronic otitis media
+    - com
+  myringosclerosis:
+    - myringosclerosis
+    - tympanosclerosis
+  normal:
+    - normal
+    - healthy
+    - intact tympanic membrane
+

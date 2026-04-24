@@ -1,0 +1,5 @@
+data_config: configs/data.yaml
+checkpoint: models/checkpoints/baseline_effb0/best.pt
+device: auto
+top_k: 3
+

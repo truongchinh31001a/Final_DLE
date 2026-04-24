@@ -1,0 +1,21 @@
+# Install the local package and core dependencies from pyproject.toml.
+-e .
+
+# App/API dependencies.
+fastapi>=0.110
+python-multipart>=0.0.9
+streamlit>=1.32
+uvicorn[standard]>=0.27
+
+# Data ingestion.
+kaggle>=1.6
+
+# Experiment tracking/artifact tooling.
+dvc>=3.0
+mlflow>=2.11
+
+# Development and tests.
+pytest>=8.0
+ruff>=0.6
+mypy>=1.8
+types-PyYAML>=6.0

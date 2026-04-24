@@ -1,0 +1,40 @@
+data:
+  seed: 42
+  image_root: data_lake/gold/classification_v1/images
+  labels_csv: data_lake/gold/classification_v1/labels.csv
+  splits_dir: data_lake/gold/classification_v1/splits
+  processed_dir: data_lake/gold/classification_v1
+
+  columns:
+    image_id: image_id
+    image_path: image_path
+    patient_id: patient_id
+    label: label
+
+  classes:
+    - acute_otitis_media
+    - cerumen_impaction
+    - chronic_otitis_media
+    - myringosclerosis
+    - normal
+
+  image_size: 224
+  normalization:
+    mean: [0.485, 0.456, 0.406]
+    std: [0.229, 0.224, 0.225]
+
+  augmentations:
+    horizontal_flip_prob: 0.5
+    rotation_degrees: 10
+    color_jitter:
+      brightness: 0.12
+      contrast: 0.12
+      saturation: 0.08
+      hue: 0.02
+
+  split:
+    val_size: 0.15
+    test_size: 0.15
+    stratify_by_label: true
+    group_column: raw_sha256
+

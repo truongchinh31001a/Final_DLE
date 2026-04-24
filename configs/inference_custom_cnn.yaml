@@ -1,0 +1,4 @@
+data_config: configs/data.yaml
+checkpoint: models/checkpoints/baseline_custom_cnn/best.pt
+device: auto
+top_k: 3

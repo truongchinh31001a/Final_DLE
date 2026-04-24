@@ -1,0 +1,90 @@
+{
+  "accuracy": 0.9977827050997783,
+  "macro_f1": 0.9977897853893823,
+  "weighted_f1": 0.9977825697213918,
+  "balanced_accuracy": 0.9977777777777778,
+  "classification_report": {
+    "acute_otitis_media": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 90.0
+    },
+    "cerumen_impaction": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 90.0
+    },
+    "chronic_otitis_media": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 90.0
+    },
+    "myringosclerosis": {
+      "precision": 0.9891304347826086,
+      "recall": 1.0,
+      "f1-score": 0.994535519125683,
+      "support": 91.0
+    },
+    "normal": {
+      "precision": 1.0,
+      "recall": 0.9888888888888889,
+      "f1-score": 0.994413407821229,
+      "support": 90.0
+    },
+    "accuracy": 0.9977827050997783,
+    "macro avg": {
+      "precision": 0.9978260869565216,
+      "recall": 0.9977777777777778,
+      "f1-score": 0.9977897853893823,
+      "support": 451.0
+    },
+    "weighted avg": {
+      "precision": 0.9978068061313023,
+      "recall": 0.9977827050997783,
+      "f1-score": 0.9977825697213918,
+      "support": 451.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      90,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      90,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      90,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      91,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      1,
+      89
+    ]
+  ],
+  "roc_auc_ovr_macro": 1.0,
+  "loss": 0.010568920074755062
+}

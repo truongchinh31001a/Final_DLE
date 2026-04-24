@@ -1,0 +1,120 @@
+{
+  "home": "Home",
+  "metrics": "Metrics",
+  "search": "Search",
+  "about": "About",
+  "profileu": "Profile",
+  "manage": "Manage",
+  "loginButton": "Login", 
+  "logout": "Logout",
+  "logo": "Logo",
+  "aboutUs": "About Us",
+  "contact": "Contact",
+  "privacyPolicy": "Privacy Policy",
+  "termsOfService": "Terms of Service",
+  "selectedFiles": "Selected files:",
+  "remove": "Remove",
+  "preview": "Preview",
+  "login": {
+    "title": "Log in to your account",
+    "email": "Email",
+    "password": "Password",
+    "loginButton": "Login",
+    "loginSuccess": "Login successful",
+    "loginError": "Login failed",
+    "loginErrorOccurred": "An error occurred during login",
+    "orWithEmail": "Or with email and password"
+  },
+  "result": {
+    "title": "Result",
+    "diagnosisIntro": "Your diagnosis is as follows:",
+    "diagnosis": "Diagnosis",
+    "unknownStatus": "Unknown",
+    "noDiagnosis": "No diagnosis available",
+    "reportButton": "Report",
+    "submitReport": "Submit Report",
+    "commentPlaceholder": "Enter your report comment here",
+    "noResult": "No result available.",
+    "backButton": "Back",
+    "loginWarning": "You need to log in to submit a report",
+    "reportSuccess": "Report submitted successfully",
+    "reportFailed": "Failed to submit the report",
+    "reportError": "An error occurred while submitting the report"
+  },
+  "register": {
+    "title": "Create your account",
+    "emailLabel": "Email",
+    "firstNameLabel": "First Name",
+    "lastNameLabel": "Last Name",
+    "passwordLabel": "Password",
+    "confirmPasswordLabel": "Confirm Password",
+    "passwordConditions": {
+      "length": "At least 8 characters",
+      "uppercase": "At least 1 uppercase letter",
+      "number": "At least 1 number"
+    },
+    "confirmPasswordError": "The two passwords do not match!",
+    "signUpButton": "Sign up",
+    "dividerText": "Or with email and password",
+    "successMessage": "Registration successful!",
+    "errorMessage": "Registration failed"
+  },
+  "resetPassword": {
+    "title": "Reset your password",
+    "emailLabel": "Email",
+    "emailPlaceholder": "Please enter your email",
+    "sendButton": "Send Reset Email",
+    "successMessage": "A password reset email has been sent!",
+    "errorMessage": "Failed to send reset email.",
+    "errorOccurred": "An error occurred while trying to send the reset email."
+  },
+  "uploadArea": {
+    "dragText": "Click or drag file to this area to upload"
+  },
+  "authPage": {
+    "noAccount": "Don't have an account?",
+    "signUp": "Sign Up",
+    "forgotPassword": "Forgot your password?",
+    "alreadyHaveAccount": "Already have an account?",
+    "login": "Login",
+    "rememberPassword": "Remember your password?",
+    "back": "Back"
+  },
+  "profile": {
+    "noProfile": "No profile found.",
+    "ear": "Ear",
+    "nose": "Nose",
+    "throat": "Throat",
+    "diagnosis": "Diagnosis",
+    "unknown": "Unknown"
+  },
+  "research": {
+    "searchPlaceholder": "Enter search keywords...",
+    "filters": {
+      "title": "Search & Filters",
+      "ear": "Ear",
+      "nose": "Nose",
+      "throat": "Throat"
+    },
+    "createdOn": "Created on",
+    "noProfiles": "No profiles found.",
+    "pagination": {
+      "prev": "Previous",
+      "next": "Next"
+    }
+  },
+  "homeP": {
+    "title": "AI-Assisted Diagnosis",
+    "subtitle": "in Otolaryngological Endoscopy",
+    "uploadSuccess": "File {{file}} uploaded successfully",
+    "uploadError": "File {{file}} upload failed",
+    "removeFile": "File removed successfully",
+    "pleaseUpload": "Please upload an image before predicting",
+    "predictSuccess": "Prediction completed.",
+    "clearFiles": "All files cleared.",
+    "predict": "Predict",
+    "clear": "Clear",
+    "loading": "Loading...",
+    "errorOccurred": "An error occurred."
+  }
+}

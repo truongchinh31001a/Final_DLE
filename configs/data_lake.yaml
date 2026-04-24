@@ -1,0 +1,37 @@
+lake:
+  root: data_lake
+  label_mapping: configs/label_mapping.yaml
+  standard_classes:
+    - acute_otitis_media
+    - cerumen_impaction
+    - chronic_otitis_media
+    - myringosclerosis
+    - normal
+
+sources:
+  - source_id: kaggle_otoscopic_v1
+    source_name: Kaggle Otoscopic Image Dataset
+    dataset_slug: ucimachinelearning/otoscopic-image-dataset
+    license: Kaggle dataset terms
+    site: kaggle
+    device: unknown
+    image_root: data/raw/images
+    labels_csv: data/raw/labels.csv
+    processed_image_root: data/processed/images
+    processed_labels_csv: data/processed/labels.csv
+    patient_id_source: synthetic_image_id
+    notes: Baseline public dataset. No real patient_id or visit/study id.
+
+gold:
+  dataset_id: classification_v1
+  image_root: data_lake/gold/classification_v1/images
+  labels_csv: data_lake/gold/classification_v1/labels.csv
+  splits_dir: data_lake/gold/classification_v1/splits
+  copy_images: true
+  split:
+    seed: 42
+    val_size: 0.15
+    test_size: 0.15
+    stratify_by_label: true
+    group_column: raw_sha256
+

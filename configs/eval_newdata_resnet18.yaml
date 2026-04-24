@@ -1,0 +1,17 @@
+data_config: configs/data.yaml
+
+model:
+  name: resnet18
+  library: torchvision
+  pretrained: false
+  dropout: 0.2
+
+train:
+  run_name: eval_newdata_resnet18
+  device: auto
+  batch_size: 32
+  num_workers: 0
+
+output:
+  checkpoint_dir: models/checkpoints
+  metrics_dir: reports/metrics_newdata

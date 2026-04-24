@@ -1,0 +1,120 @@
+{
+  "home": "Trang chủ",
+  "metrics": "Số liệu",
+  "search": "Tìm kiếm",
+  "about": "Giới thiệu",
+  "loginButton":"Đăng nhập",
+  "profileu": "Hồ sơ",
+  "manage": "quản lý",
+  "logout": "Đăng xuất",
+  "logo": "Logo",
+  "aboutUs": "Về Chúng Tôi",
+  "contact": "Liên Hệ",
+  "privacyPolicy": "Chính Sách Bảo Mật",
+  "termsOfService": "Điều Khoản Dịch Vụ",
+  "selectedFiles": "Các tập tin đã chọn:",
+  "remove": "Xóa",
+  "preview": "Xem trước",
+  "login": {
+    "title": "Đăng nhập vào tài khoản của bạn",
+    "email": "Email",
+    "password": "Mật khẩu",
+    "loginButton": "Đăng nhập",
+    "loginSuccess": "Đăng nhập thành công",
+    "loginError": "Đăng nhập thất bại",
+    "loginErrorOccurred": "Đã xảy ra lỗi khi đăng nhập",
+    "orWithEmail": "Hoặc đăng nhập bằng email và mật khẩu"
+  },
+  "result": {
+    "title": "Kết quả",
+    "diagnosisIntro": "Chẩn đoán của bạn như sau:",
+    "diagnosis": "Chẩn đoán",
+    "unknownStatus": "Không xác định",
+    "noDiagnosis": "Không có chẩn đoán",
+    "reportButton": "Báo cáo",
+    "submitReport": "Gửi báo cáo",
+    "commentPlaceholder": "Nhập bình luận báo cáo của bạn tại đây",
+    "noResult": "Không có kết quả.",
+    "backButton": "Trở lại",
+    "loginWarning": "Bạn cần đăng nhập để gửi báo cáo",
+    "reportSuccess": "Gửi báo cáo thành công",
+    "reportFailed": "Gửi báo cáo thất bại",
+    "reportError": "Đã xảy ra lỗi khi gửi báo cáo"
+  },
+  "register": {
+    "title": "Tạo tài khoản của bạn",
+    "emailLabel": "Email",
+    "firstNameLabel": "Tên",
+    "lastNameLabel": "Họ",
+    "passwordLabel": "Mật khẩu",
+    "confirmPasswordLabel": "Xác nhận mật khẩu",
+    "passwordConditions": {
+      "length": "Ít nhất 8 ký tự",
+      "uppercase": "Ít nhất 1 chữ cái viết hoa",
+      "number": "Ít nhất 1 số"
+    },
+    "confirmPasswordError": "Hai mật khẩu không khớp!",
+    "signUpButton": "Đăng ký",
+    "dividerText": "Hoặc đăng nhập bằng email và mật khẩu",
+    "successMessage": "Đăng ký thành công!",
+    "errorMessage": "Đăng ký thất bại"
+  },
+  "resetPassword": {
+    "title": "Đặt lại mật khẩu của bạn",
+    "emailLabel": "Email",
+    "emailPlaceholder": "Vui lòng nhập email của bạn",
+    "sendButton": "Gửi email đặt lại mật khẩu",
+    "successMessage": "Email đặt lại mật khẩu đã được gửi!",
+    "errorMessage": "Gửi email đặt lại mật khẩu thất bại.",
+    "errorOccurred": "Có lỗi xảy ra khi cố gắng gửi email đặt lại mật khẩu."
+  },
+  "uploadArea": {
+    "dragText": "Nhấn hoặc kéo tệp vào khu vực này để tải lên"
+  },
+  "authPage": {
+    "noAccount": "Chưa có tài khoản?",
+    "signUp": "Đăng ký",
+    "forgotPassword": "Quên mật khẩu?",
+    "alreadyHaveAccount": "Đã có tài khoản?",
+    "login": "Đăng nhập",
+    "rememberPassword": "Nhớ mật khẩu?",
+    "back": "Quay lại"
+  },
+  "profile": {
+    "noProfile": "Không tìm thấy hồ sơ.",
+    "ear": "Tai",
+    "nose": "Mũi",
+    "throat": "Họng",
+    "diagnosis": "Chẩn đoán",
+    "unknown": "Không rõ"
+  },
+  "research": {
+    "searchPlaceholder": "Nhập từ khóa tìm kiếm...",
+    "filters": {
+      "title": "Tìm kiếm & Bộ lọc",
+      "ear": "Tai",
+      "nose": "Mũi",
+      "throat": "Họng"
+    },
+    "createdOn": "Tạo vào",
+    "noProfiles": "Không tìm thấy hồ sơ.",
+    "pagination": {
+      "prev": "Trước",
+      "next": "Tiếp"
+    }
+  },
+  "homeP": {
+    "title": "AI hỗ trợ chẩn đoán",
+    "subtitle": "trong nội soi tai mũi họng",
+    "uploadSuccess": "Tải lên thành công tệp {{file}}",
+    "uploadError": "Tải lên tệp {{file}} thất bại",
+    "removeFile": "Tệp đã bị xóa.",
+    "pleaseUpload": "Vui lòng tải lên hình ảnh trước khi dự đoán.",
+    "predictSuccess": "Dự đoán hoàn tất.",
+    "clearFiles": "Đã xóa tất cả các tệp.",
+    "predict": "Dự đoán",
+    "clear": "Xóa",
+    "loading": "Đang tải...",
+    "errorOccurred": "Đã xảy ra lỗi."
+  }
+}
