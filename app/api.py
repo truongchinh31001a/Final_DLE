@@ -57,6 +57,7 @@ async def predict(
                 "available_model_ids": available_model_ids,
             },
         )
+    selected_model_id = model_id if model_id else DEFAULT_MODEL_ID
 
     suffix = Path(upload.filename or "image.jpg").suffix or ".jpg"
     content = await upload.read()
@@ -66,6 +67,21 @@ async def predict(
 
     try:
         predictor = get_predictor(config, resolved_checkpoint)
-        return predictor.predict(image_path)
+        result = predictor.predict(image_path)
+        if checkpoint:
+            result["model"] = {
+                "id": model_id or "custom_checkpoint",
+                "label": "Custom checkpoint",
+                "checkpoint": resolved_checkpoint,
+            }
+        else:
+            model_lookup = {item["id"]: item for item in list_available_models()}
+            selected_model = model_lookup[selected_model_id]
+            result["model"] = {
+                "id": selected_model_id,
+                "label": selected_model["label"],
+                "checkpoint": selected_model["checkpoint"],
+            }
+        return result
     finally:
         image_path.unlink(missing_ok=True)

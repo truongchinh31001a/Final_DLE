@@ -1,4 +1,0 @@
-data_config: configs/data.yaml
-checkpoint: models/checkpoints/baseline_resnet18/best.pt
-device: auto
-top_k: 3

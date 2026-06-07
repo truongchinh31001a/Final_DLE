@@ -1,4 +1,0 @@
-image_id,image_path,patient_id,label,ear_side,age,sex,source,quality,patient_id_source
-acute_otitis_media_001,acute_otitis_media/001.jpg,acute_otitis_media_001,acute_otitis_media,,,,ucimachinelearning/otoscopic-image-dataset,,synthetic_image_id
-cerumen_impaction_001,cerumen_impaction/001.jpg,cerumen_impaction_001,cerumen_impaction,,,,ucimachinelearning/otoscopic-image-dataset,,synthetic_image_id
-normal_001,normal/001.jpg,normal_001,normal,,,,ucimachinelearning/otoscopic-image-dataset,,synthetic_image_id

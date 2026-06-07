@@ -8,7 +8,7 @@ Pipeline phan loai benh tai tu anh noi soi tai. Repo nay gom data ingestion, pro
 
 - Default pipeline dang dung `data/`, khong dung `data_lake/` trong train/eval mac dinh.
 - Default train config la [`configs/train.yaml`](configs/train.yaml), tuong ung run `baseline_effb0`.
-- `data/raw/pull_data.py` co the gom nhieu local source trong `data/raw/` nhu `Oto-Endoscopic_Images` va `Datos`.
+- `data/raw/pull_data.py` mac dinh build raw labels tu `data/raw/_kaggle_otoscopic_image_dataset/Otoscopic_Data`.
 - Benchmark chinh hien tai nam trong `reports/metrics/`.
 - `reports/metrics_newdata/` nen xem la khu vuc evaluate ad-hoc khi bo du lieu thay doi.
 
@@ -45,7 +45,7 @@ python -m pip install -e ".[dev,tracking]"
 
 ## Quick Start
 
-1. Gom local sources va tao raw labels:
+1. Gom source Kaggle/UCI mac dinh va tao raw labels:
 
 ```bash
 python data/raw/pull_data.py --force
@@ -77,6 +77,22 @@ python scripts/train.py --config configs/train.yaml
 
 Run metrics se duoc log local vao `mlruns/`.
 
+Neu muon doi chieu voi recipe train tu notebook Kaggle, repo da co san 2 config:
+
+```bash
+python scripts/train.py --config configs/train_kaggle_resnet18.yaml
+python scripts/train.py --config configs/train_kaggle_effb0.yaml
+```
+
+Hai config nay giu split duplicate-aware hien tai cua repo, nhung doi recipe train sang:
+
+- `strategy: head_only`
+- `optimizer: Adam`
+- `scheduler: ReduceLROnPlateau`
+- `batch_size: 16`
+- `epochs: 30`
+- `monitor: accuracy`
+
 6. Evaluate default model:
 
 ```bash
@@ -86,35 +102,36 @@ python scripts/evaluate.py --config configs/train.yaml --checkpoint models/check
 ## Docs
 
 - [`docs/project_summary.md`](docs/project_summary.md): ban tong hop tu dau den cuoi cua project, tu du lieu den model chot.
-- [`docs/data_pipeline.md`](docs/data_pipeline.md): luong du lieu mac dinh, current sources, caveat cua `Datos`, va y nghia tung artifact.
+- [`docs/data_pipeline.md`](docs/data_pipeline.md): luong du lieu mac dinh, source Kaggle/UCI, va y nghia tung artifact.
 - [`docs/models.md`](docs/models.md): inventory model, metric benchmark, va khuyen nghi model nen chot.
 - [`docs/data_contract.md`](docs/data_contract.md): schema/metadata contract cho `labels.csv`.
 - [`docs/data_lake.md`](docs/data_lake.md): pipeline data lake. Hien tai la path optional, khong phai default.
 
 ## Du Lieu
 
-Hai local source dang co mat trong `data/raw/`:
+Source raw mac dinh cua repo:
 
-- `Oto-Endoscopic_Images`: 5 class goc tu bo Kaggle/UCI.
-- `Datos`: 4 class (`cerumen_impaction`, `chronic_otitis_media`, `myringosclerosis`, `normal`), khong co `acute_otitis_media`.
+- `data/raw/_kaggle_otoscopic_image_dataset/Otoscopic_Data`: 5 class goc tu bo Kaggle/UCI.
 
 Khi chay `python data/raw/pull_data.py --force`, script se:
 
-- uu tien gom cac folder source local trong `data/raw/`
+- uu tien dung source dir mac dinh `data/raw/_kaggle_otoscopic_image_dataset/Otoscopic_Data`
+- chi download lai staging dir neu source dir mac dinh chua ton tai va khong bat `--skip-download`
 - copy anh vao `data/raw/images/<class>/...`
 - tao `data/raw/labels.csv`
-- gan cot `source` de track anh den tu source nao
+- gan cot `source` la slug dataset Kaggle/UCI
 - sinh `patient_id` synthetic theo tung anh vi current public sources khong co patient id that
 
 Current split van la image-level proxy split, khong phai patient-level split that. Config split dung `raw_sha256` de duplicate exact-match nam cung split.
 Mac dinh moi cung bat `split.deduplicate_by_group: true`, nen moi `raw_sha256` chi giu 1 dai dien trong CSV split.
 
-Neu can build chi tu mot source cu the:
+Neu can override source mac dinh:
 
 ```bash
-python data/raw/pull_data.py --force --skip-download --source-dir data/raw/Oto-Endoscopic_Images
-python data/raw/pull_data.py --force --skip-download --source-dir data/raw/Datos
+python data/raw/pull_data.py --force --skip-download --source-dir data/raw/_kaggle_otoscopic_image_dataset/Otoscopic_Data
 ```
+
+Neu da doi source raw, can rerun lai `process_data.py`, `prepare_data.py`, EDA, train, va evaluate de benchmark phan anh dung dataset moi.
 
 ## Model Recommendation
 
